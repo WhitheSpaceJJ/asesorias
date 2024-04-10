@@ -1,0 +1,225 @@
+<link rel="stylesheet" href="./tailwind.css" />
+
+<seccion id="usuarios-tab" class="flex flex-col">
+
+
+  <div class="grid md:grid-cols-2 md:gap-6  mb-6  pb-6 ">
+    <h2 class="text-3xl font-bold      ">Usuario</h2>
+  </div>
+  <!--Select-->
+
+  <div class="grid md:grid-cols-2 md:gap-6">
+    <div class="relative z-0 w-full mb-6 group flex flex-col">
+      <label for="empleado" class="font-medium text-md text-black mb-2 mr-4">Asociar a Empleado</label>
+      <input type="radio" id="empleado" name="asociacion" class="mt-1" checked>
+    </div>
+    <div class="relative z-0 w-full mb-6 group flex flex-col">
+      <label for="distrito" class="font-medium text-md text-black mb-2 mr-4">Asociar a Distrito(Encargado)</label>
+      <input type="radio" id="distrito" name="asociacion" class="mt-1">
+    </div>
+  </div>
+
+  <div class="grid md:grid-cols-2 md:gap-6"  id="bloque-opciones">
+    <div class="relative   z-0 w-full mb-6 group flex flex-col ">
+      <label class="font-medium text-black text-md">Seleccione el tipo de empleado:</label>
+      <div class="flex items-center">
+        <input id="asesor-option" type="radio" value="asesor" name="rb-empleado" checked
+          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-0" />
+        <label for="asesor-option" class="ml-2 text-sm font-medium text-black">Asesor</label>
+      </div>
+      <div class="flex items-center">
+        <input id="defensor-option" type="radio" value="defensor" name="rb-empleado"
+          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-0" />
+        <label for="defensor-option" class="ml-2 text-sm font-medium text-black">Defensor</label>
+      </div>
+    </div>
+
+    <div class="relative z-0 w-full mb-6 group flex flex-col ">
+      <div class="relative z-0 w-full mt-3 group" id="bloque-asesor">
+        <label for="asesor"
+          class="font-medium absolute text-md text-black duration-300 transform -translate-y-6 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-6">Nombre
+          del asesor</label>
+        <select id="asesor" name="asesor"
+          class="block w-full p-1 px-2.5 mt-4 text-black border border-gray-300 rounded-lg bg-gray-50 text-md focus:ring-blue-500 focus:border-blue-500">
+          <option selected disabled value="0">Selecciona un asesor</option>
+        </select>
+      </div>
+
+      <div class="relative  hidden  w-full mt-6 group" id="bloque-defensor">
+        <label for="defensor"
+          class="font-medium absolute text-md text-black duration-300 transform -translate-y-6 top-3 -z-10 origin-[0] peer-focus:left-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-6">Nombre
+          del defensor</label>
+        <select id="defensor" name="defensor"
+          class="block w-full p-1 px-2.5 mt-4 text-black border border-gray-300 rounded-lg bg-gray-50 text-md focus:ring-blue-500 focus:border-blue-500">
+          <option selected disabled value="">Selecciona un defensor</option>
+        </select>
+      </div>
+      <div class="relative    w-full mt-6 group" >
+        <label for="distrito-judicial2" class="font-medium text-md text-black mb-2">Distrito judicial (Empleado)</label>
+        <select id="distrito-judicial2" name="distrito-judicial2"
+          class="block w-full p-1 px-2.5 mt-4 text-black border border-gray-300 
+          rounded-lg bg-gray-50 text-md focus:ring-blue-500 focus:border-blue-500" disabled>
+          <option value="0">Seleccione una opcion</option>
+        </select>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="grid md:grid-cols-2 md:gap-6 hidden"  id="bloque-distrito">
+    <div class="relative z-0 w-full mb-6 group flex flex-col ">
+    </div>
+    <div class="relative   z-0 w-full mb-6 group flex flex-col ">
+      <label for="distrito-judicial" class="font-medium text-md text-black mb-2">Distrito judicial</label>
+      <select id="distrito-judicial" name="distrito-judicial" 
+        class="block w-full p-1 px-2.5 mt-4 text-black border border-gray-300 rounded-lg
+         bg-gray-50 text-md focus:ring-blue-500 focus:border-blue-500" >
+        <option value="0">Seleccione una opcion</option>
+      </select>
+    </div>
+  </div>
+
+
+  <div class="grid md:grid-cols-2 md:gap-6  mb-6  pb-6 ">
+    <h2 class="text-2xl font-bold      ">Datos Generales</h2>
+  </div>
+  <div class="grid md:grid-cols-2 md:gap-6">
+    <div class="relative z-0 w-full mb-6 group flex flex-col">
+      <div class="relative z-0 w-full mb-6 group flex flex-col">
+        <label for="nombre" class="font-medium text-md text-black mb-2">Nombre</label>
+        <input type="text" name="nombre" id="nombre"
+          class="block w-full px-0 pt-4 text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none text-md focus:outline-none focus:ring-0 peer"
+          placeholder=" " value="" required />
+      </div>
+      <div class="relative z-0 w-full mb-6 group flex flex-col">
+        <label for="apellido-paterno" class="font-medium text-md text-black mb-2">Apellido paterno</label>
+        <input type="text" name="apellido-paterno" id="apellido-paterno"
+          class="block w-full px-0 pt-4 text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none text-md focus:outline-none focus:ring-0 peer"
+          placeholder=" " value="" required />
+      </div>
+
+    </div>
+    <div class="relative z-0 w-full mb-6 group flex flex-col">
+      <div class="relative z-0 w-full mb-6 group flex flex-col">
+        <label for="apellido-materno" class="font-medium text-md text-black mb-2">Apellido materno</label>
+        <input type="text" name="apellido-materno" id="apellido-materno"
+          class="block w-full px-0 pt-4 text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none text-md focus:outline-none focus:ring-0 peer"
+          placeholder=" " value="" required />
+      </div>
+      <!--
+      <div class="relative z-0 w-full mb-6 group flex flex-col">
+        <label for="tipo-usuario"
+          class="font-medium text-md text-black mb-2">Tipo de usuario</label>
+        <select id="tipo-usuario" name="tipo-usuario"
+          class="block w-full p-1 px-2.5 mt-4 text-black border border-gray-300 rounded-lg bg-gray-50 text-md focus:ring-blue-500 focus:border-blue-500">
+          <option value="0">Selecciona un tipo de usuario</option>
+        </select>
+      </div>
+   
+    
+      <div class="relative z-0 w-full mb-6 group flex flex-col">
+        <label for="distrito-judicial"
+          class="font-medium text-md text-black mb-2">Distrito judicial</label>
+        <select id="distrito-judicial" name="distrito-judicial"
+          class="block w-full p-1 px-2.5 mt-4 text-black border border-gray-300 rounded-lg bg-gray-50 text-md focus:ring-blue-500 focus:border-blue-500">
+          <option value="0">Seleccione una opcion</option>
+        </select>
+      </div>
+    -->
+
+      <div class="relative z-0 w-full mb-6 group flex flex-col">
+        <label for="estatus-usuarios" class="font-medium text-md text-black mb-2">Estatus</label>
+        <select id="estatus-usuario" name="estatus-usuario"
+          class="block w-full p-1 px-2.5 mt-4  text-black border border-gray-300 rounded-lg bg-gray-50 text-md focus:ring-blue-500 focus:border-blue-500">
+          <option selected disabled value="0">Selecciona un estatus</option>
+          <option value="ACTIVO">ACTIVO</option>
+          <option value="INACTIVO">INACTIVO</option>
+        </select>
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+
+
+  <div class="grid md:grid-cols-2 md:gap-6  mb-6  pb-6 ">
+    <h2 class="text-2xl font-bold      ">Datos de Sesion</h2>
+  </div>
+
+
+
+  <div class="mb-6 group flex  justify-between">
+    <div class="w-3/4" id="datos-catalogo">
+      <div class="relative z-0 w-full mb-6 group flex flex-col">
+        <label for="correo-electronico" class="font-medium text-md text-black mb-2">Correo Electronico</label>
+        <input type="text" name="correo-electronico" id="correo-electronico"
+          class="block w-full px-0 pt-4 text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none text-md focus:outline-none focus:ring-0 peer"
+          placeholder=" " value="" required />
+      </div>
+      <div class="relative z-0 w-full mb-6 group flex flex-col">
+        <label for="password" class="font-medium text-md text-black mb-2">Password</label>
+        <input type="text" name="password" id="password"
+          class="block w-full px-0 pt-4 text-black bg-transparent border-0 border-b-2 border-gray-300 appearance-none text-md focus:outline-none focus:ring-0 peer"
+          placeholder=" " value="" required />
+      </div>
+    </div>
+    <div class="w-2/4  h-6 flex-col justify-between
+    p-4
+    " id="acciones-usuario">
+      <div class="relative 
+      p-10 
+      ">
+
+        <button id="agregar-usuario" class="bg-red-500 hover:bg-red-600 text-white font-medium
+         p-3  mx-3
+         mb-2 rounded w-full
+        
+        
+        ">
+          Agregar
+        </button>
+        <button id="editar-usuario" class="bg-red-500 hover:bg-red-600 w-full text-white
+      p-3  mx-3
+      font-medium rounded
+      
+      ">
+          Editar
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="my-8">
+    <h2 class="text-2xl font-bold">Usuarios</h2>
+    <table class="min-w-full divide-y divide-gray-200">
+      <thead class="bg-gray-50">
+        <tr>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nombre
+          </th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            Apellido Paterno</th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            Apellido Materno</th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo de
+            Usuario</th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            Distrito Judicial</th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Estatus
+          </th>
+          <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"> Acción
+          </th>
+        </tr>
+      </thead>
+      <tbody class="bg-white divide-y divide-gray-200" id="table-usuario">
+
+      </tbody>
+    </table>
+  </div>
+
+
+</seccion>
